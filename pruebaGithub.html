@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">    
+ <head>
+    <title>planteamiento programa</title>
+ </head>   
+
+ <body style="background-color:lightskyblue;">
+    <h1>Plantamiento de un programa de compra online</h1>
+    <p>Para un programa basico de compra online de cara a un empleado de nuestra tienda necesitamos:</p>
+    <ul>
+        <li>Un metodo que se encargue de mostrar un menu con las opciones que puede<br> 
+          efectuar el empleado por medio de un switch.</li><br>
+          <li>Un bucle while que repita el metodo principal del menu una y otra vez hasta que el usuario elija la<br>
+          opcion salir, opcion que rompera el bucle para que el programa termine.</li><br>
+        <li>Necesitamos uno o varios metodos donde tengamos los Strings o sysos que se mostraran un texto,<br>
+        junto a cada una de las opciones de nuestro menu, indicando para que sirve cada opcion disponible.<br>
+        Nuestro menu se encargara de llamar a este metodo mas adelante.</li><br>
+          <li>Un metodo con un scanner y un teclado para que el usuario pueda seleccionar<br>
+        una opcion de las disponibles en nuestro menu.</li><br>
+        
+        <li>Objetos que se encarguen de representar los productos disponibles en nuestra<br>
+        tienda (ej:Objeto producto y sus hijos ---> objeto Libro, objeto tablet, objeto auriculares etc.).</li><br> 
+        
+        <li>Una clase que posea una lista dinamica como un arrayList, por ejemplo,
+            que se encargue de<br> almacenar,introducir,modificar y eliminar los productos
+            de nuestra tienda.
+        </li> 
+    </ul>
+
+    <p>El menu de nuestra tienda se mostraria de la siguiente manera:</p>
+
+    <p>[Se ejecuta el metodo menu,se crea una variable que llama y almacena al metodo Scanner<br> 
+    para que el usuario pueda seleccionar las opciones disponibles en el menu,<br>
+     menu llama al metodo mostrar texto]<br>
+    [Se muestra el siguiente texto]</p>
+    <p>Bienvenido al gestor de SevillaExpress</p>
+    <p>[Se inicia el bucle while que se repetira mientras que la opcion seleccionada por el usuario
+        <br> sea menor que 5].</p>
+    <p>Seleccione una de las opciones disponibles:</p>
+
+    <ol>
+        <li>Añadir un objeto a la tienda</li>
+        <li>Eliminar un objeto de la tienda</li>
+        <li>Modificar un objeto de la tienda</li>
+        <li>Añadir o quitar stock de un objeto en tienda</li>
+        <li>Salir</li>
+    </ol>
+    <ul><li>Si el usuario selecciona la opcion 1, se mostrara otro texto: "Introduzca
+        nombre del producto, precio y stock disponible".
+        Una vez introducido los datos se creara un objeto con dicha informacion
+        que pasara a almacenarse en el ArrayList.</li><br>
+        <li>Si el usuario selecciona la opcion 2, se mostrara el siguiente texto:
+            "Introduzca el nombre del producto que desea eliminar". Una vez introducido
+            el nombre se buscara dentro del ArrayList un producto existene con dicho nombre,
+            <br>si el producto existe, se borrara del ArrayList y se eliminara dicho objeto.
+        </li><br>
+        <li>Si el usuario elije la opcion 3 se mostrara el siguiente texto: 
+            "Introduzca el nombre del producto que desea<br> 
+            modificar". El ArrayList hara una busqueda para encontrar un producto con
+        un nombre que coincida con el<br>
+        nombre introducido con el usuario, si dicho producto existe se muestra el
+        siguiente mensaje:<br><p>"¿Que desea modificar?"</p>
+
+        <ol>
+            <li>Nombre del producto</li>
+            <li>Precio del producto</li>
+            
+        
+        </ol>
+
+        <p>Idependientemente de las opciones que el usuario escoja,
+           los nuevos datos que introduzca se modificaran por medio de los
+           setters del objeto.
+        </p>
+        </li>
+        <li>Si el usuario selecciona opcion 4,el programa le preguntara
+            por el nombre del objeto, una vez introducido, el array<br>
+            buscara dicho objeto por su nombre, si este objeto existe,
+            el programa indicara al usuario dos opciones seleccionables
+
+            <br><br>
+
+            <ol>
+                <li>Añadir stock</li>
+                <li>Retirar stock</li>
+            </ol>
+            
+
+        <p>Si el usuario elige la opcion 1 e introduce 8 para aumentar
+            el stock de unidades de una tablet, estas 8 se sumaran a las unidades
+            ya existentes previamente de tablets,para evitar que entren numeros negativos 
+            se comprobara que el<br>numero introducido sea mayor a 0 con un condicional(ej: if(numero>0{this.stock+=numero})).
+            Por el contrario si- <br> elige la opcion 2, esas 8 unidades se restarian no sin antes comprobar por medio
+            de un condicional que el numero de unidades disponibles, es mayor o igual
+            al numero de unidades de stock que se van a restar (ej: 
+            if(this.stock>=numero{this.stock-=numero;
+
+            })), para evitar bugs en el programa
+        </p>    
+        </li>
+        <li>Si el usuario elige la opcion 5 se rompera el bucle y acabara el programa</li>
+    </ul>
+    
+ </body>
+</html>
